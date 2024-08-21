@@ -21,6 +21,7 @@
         /* Imprimir elemento na posição específica */
         Console.WriteLine("Fruta ni indice 2: " + frutas[2]);
 
+        Console.WriteLine();
         /* Inserir um elemento no indice específico */
         frutas.Insert(1, "Maracuja");
 
@@ -31,6 +32,7 @@
             Console.WriteLine(fruta);
         }
 
+        Console.WriteLine();
         /* Alterar um elemento no índice específico*/
         frutas[4] = "Pêra";
 
@@ -40,7 +42,7 @@
         {
             Console.WriteLine(fruta);
         }
-
+        Console.WriteLine();
         /* Remover elementos da lista*/
         frutas.RemoveAt(3);
         /* Remover elementos pelo valor do conteúdo */
@@ -56,7 +58,9 @@
         /* Apagar todos os elementos da lista */
         frutas.Clear();
 
-        //----------------------------------------------------------------------------------------------------
+        Console.WriteLine();
+        Console.WriteLine("========================================================");
+
         // Trabalhando com dicionário
         Dictionary<int, string> carros = new Dictionary<int, string>();
         // Adicionar Dados a um Dicionário 
@@ -69,5 +73,78 @@
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
+
+        Console.WriteLine();
+        Console.WriteLine("========================================================");
+
+        // Trabalhando com fila
+        // Criar uma fila (queue) 
+        Queue<string> filaBanco = new Queue<string>();
+
+        // Adicionar Elementos em uma FILA
+        filaBanco.Enqueue("Pedro");
+        filaBanco.Enqueue("Thiago");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Mateus");
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        filaBanco.Dequeue();
+
+        Console.WriteLine();
+        Console.WriteLine("========================================================");
+        Console.WriteLine();
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+
+        }
+
+        bool achou = filaBanco.Contains("João");
+
+        if (achou == true)
+        {
+            Console.WriteLine("A pessoa está na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não está na fila");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("========================================================");
+        Console.WriteLine();
+
+        // Trabalho com pilha ( stack )
+        // Criando uma pilha 
+        Stack<string> livros = new Stack<string>();
+
+        // Adicionar elementos em uma pilha 
+        livros.Push("Chapeuzinho Vermelho");
+        livros.Push("Branca de Neve e os Sete Anões");
+        livros.Push("Princesa e o Sapo");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("========================================================");
+        Console.WriteLine();
+
+        // Remove o primeiro elemento da Pilha 
+        livros.Pop();
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("========================================================");
+        Console.WriteLine();
     }
 }
